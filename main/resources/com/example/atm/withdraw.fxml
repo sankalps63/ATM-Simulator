@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.atm.Withdrawal">
+    <children>
+        <VBox alignment="CENTER" prefHeight="400.0" prefWidth="600.0" spacing="50.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <HBox alignment="CENTER" prefHeight="137.0" prefWidth="600.0">
+                    <children>
+                        <Label fx:id="welcomeText" text="UserName , please enter your 4 digit pin below to get your available account balance." textAlignment="CENTER" wrapText="true" HBox.hgrow="SOMETIMES">
+                            <font>
+                                <Font size="24.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </HBox>
+                <VBox alignment="CENTER" spacing="10.0" VBox.vgrow="ALWAYS">
+                    <children>
+                  <VBox alignment="BOTTOM_CENTER" spacing="5.0">
+                     <children>
+                        <HBox alignment="CENTER" spacing="15.0">
+                           <children>
+                              <Label text="Amount: ">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="amount" alignment="CENTER" maxWidth="200.0" prefHeight="26.0" prefWidth="410.0" promptText="Enter amount to withdraw">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </HBox>
+                        <Label fx:id="hundreds" alignment="TOP_CENTER" contentDisplay="CENTER" prefHeight="18.0" prefWidth="601.0" text="Please enter amount in the multiple of Hundreds." textAlignment="CENTER" textFill="#9c0d0d" visible="false" />
+                     </children>
+                  </VBox>
+                        <VBox alignment="BOTTOM_CENTER" spacing="5.0">
+                            <children>
+                        <HBox alignment="CENTER" spacing="15.0">
+                           <children>
+                              <Label text="        Pin: ">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                                      <TextField fx:id="pinField" alignment="CENTER" maxWidth="200.0" prefHeight="26.0" prefWidth="410.0" promptText="Enter your pin here">
+                                          <font>
+                                              <Font size="14.0" />
+                                          </font>
+                              </TextField>
+                           </children>
+                        </HBox>
+                                <Label fx:id="incWarn" alignment="TOP_CENTER" contentDisplay="CENTER" prefHeight="18.0" prefWidth="601.0" text="Incorrect Pin! Please try again or visit help section." textAlignment="CENTER" textFill="#9c0d0d" visible="false" />
+                            </children>
+                        </VBox>
+                        <VBox alignment="TOP_CENTER">
+                            <children>
+                                <Button fx:id="withdrawBut" mnemonicParsing="false" onAction="#withdraw" text="Initiate Withdrawal" />
+                                <Label fx:id="attempt" alignment="CENTER" contentDisplay="CENTER" prefHeight="18.0" prefWidth="249.0" text="Attempts Remaining: x" textFill="#a40808" visible="false" />
+                            </children>
+                        </VBox>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="50.0">
+                            <children>
+                                <Button fx:id="helpBut" mnemonicParsing="false" onAction="#helpBut" prefHeight="26.0" prefWidth="85.0" text="Help" />
+                                <Button fx:id="dashBut" mnemonicParsing="false" onAction="#gtDash" text="Go To Dashboard" />
+                            </children>
+                        </HBox>
+                    </children>
+                </VBox>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>
